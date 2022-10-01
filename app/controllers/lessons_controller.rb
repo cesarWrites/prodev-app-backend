@@ -1,4 +1,4 @@
-class LessonController < ApplicationController
+class LessonsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     def index
         if params[:course_id]
@@ -23,6 +23,5 @@ class LessonController < ApplicationController
     def render_not_found_response
         render json: { error: "Review not found" }, status: :not_found
     end
-end
 
 end

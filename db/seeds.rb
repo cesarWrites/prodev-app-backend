@@ -11,7 +11,7 @@ descriptions = ["learn the versatile python programmiing language", "(included J
 
 5.times do
     course = Course.create(
-        title: Faker::Internet.name,
+        title: "#{adjectives.sample} #{Faker::Appliance.equipment}",
         rating: ratings.sample
     )
 

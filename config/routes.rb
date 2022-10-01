@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :lessons, only: [:index]
-  resources :courses, only: [:show] do
-    resources :items, only: [:show, :index, :create]
+  resources :courses, only: [:show, :index] do
+    resources :lessons, only: [:show, :index, :create]
   end
 end
